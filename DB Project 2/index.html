@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Main DB Project II </title>
+    
+    <!-- Enlace a un CDN de Bootstrap -->
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+
+<body>
+
+    <h1 style="background-color: yellowgreen"> DB II Project </h1>
+
+    <!-- START CONTAINER -->
+    <div class="container" id="main_container">
+        <div class="card" id="App">
+
+            <h1 style="background-color: darkseagreen"> Select Database Engine and your credentials </h1>
+
+            <div class="card-header">
+
+                <!-- RADIO BUTTONS -->
+                <form id="radio_buttons">
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="postgreSQL" name="customRadio" class="custom-control-input" checked="">
+                        <label class="custom-control-label" for="postgreSQL"> PostgresSQL </label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="sqlServer" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="sqlServer"> SQL Server </label>
+                    </div>
+                </form>
+                
+                <!-- USER DATA -->
+                <form id="data-form" class="card-body">
+                    <div class="form-group">
+                        <input type="text" id="host" placeholder="(Host) IP Server" class="form-control" value="localhost">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="port" placeholder="Port" class="form-control" value="">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="user" placeholder="User" class="form-control" value="">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="pass" placeholder="Password" class="form-control" value="12345">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="db_name" placeholder="DB name" class="form-control" value="">
+                    </div>
+                    
+                    <!--Boton: summit dispara el evento. btnblock: el boton ocupa todo el espacio del formulario btn-block -->
+                   
+                    <button type="submit" class="btn btn-primary btn-block"> Connect </button>
+
+                </form>
+                
+            </div>
+        </div>
+    </div>
+    
+.
+    <div class="container">
+        <div class="card">
+            <h1 style="background-color: darkseagreen"> CRUDS GENERATOR </h1>
+            <div class="card-header">
+
+                <h4> Select database table to generate CRUD </h4>
+            
+                <!-- TABLE LIST FORM -->
+                <form id="table-form" class="card-body">
+                    <div class="form-group">
+                        <select class = "form-control" id="selectedTable">
+                            <!-- List elements -->
+                            <option value="select"> Select </option>
+                        </select>
+                    </div>
+                    <!-- Display button -->
+                    <button type="submit1" id="display" class="btn btn-primary btn-block"> Display registers </button>
+                </form>
+
+<!-- GENERATE CODE FORM -->
+                <form id="generate-form" class="card-body">
+                    <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="check_create">
+                        <label class="form-check-label" for="check_create">Create</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="check_read">
+                        <label class="form-check-label" for="check_read"> Read </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="check_update">
+                        <label class="form-check-label" for="check_update"> Update </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="check_delete">
+                        <label class="form-check-label" for="check_delete"> Delete </label>
+                    </div>
+
+                    <!-- Generate button -->
+                    <button type="submit" id="generate" class="btn btn-primary"> Generate Code </button>
+
+                    <h4> Generated code: </h4>
+                    <!-- Text Area Form -->
+                    <div class = "form-group">
+                        <textarea class = "form-control" id="textArea1" rows = "10"> </textarea>
+                    </div>
+                    <!-- Execute button -->
+                    <button type="submit3" id="execute" class="btn btn-primary"> Execute Code </button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    .
+    <div class="container">
+        <div class="card-header">
+            <h4 style="color: black;"> Table data </h4>
+            <table class = "table table-hover">
+                <thead>
+                    <!-- Columns -->
+                    <tr class = "table-success">
+                        <th scope = "row"> Colum1 </th>
+                        <th scope = "row"> Colum2 </th>
+                        <th scope = "row"> Colum3 </th>
+                        <th scope = "row"> Colum4 </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Rows -->
+                    <tr>
+                        <td> file 1 </td>
+                        <td> file 2 </td>
+                        <td> file 3 </td>
+                        <td> file 4 </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+  
+    <!-- javascript conection -->
+     <script src="frontend.js"></script> 
+</body>
+</html>
